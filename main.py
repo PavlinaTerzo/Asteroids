@@ -7,5 +7,16 @@ def main():
     print(f"Screen width: {SCREEN_WIDTH}")
     print(f"Screen height: {SCREEN_HEIGHT}")
 
+    running = True
+    while running:
+        for event in pygame.event.get():
+            if event.type == pygame.quit:
+                running = False
+        screen.fill((0, 0, 0))
+
+        pygame.display.flip()
+    pygame.quit
+
+
 if __name__ == "__main__":
     main()
